@@ -55,7 +55,7 @@ def create_file_to_run_bkp(dbname):
 def run_command():
   global disk
   global log
-  print('Start backup')
+  print('Start backup')s
   log+="Start backup: "+disk+" - "+get_hour_now()+"\n"
 
   output = subprocess.call('sqlcmd -S '+ config.dbserver +' -U '+ config.u +' -P '+ config.p + ' -i "'+os.path.dirname(os.path.realpath(__file__))+'/sql/dbbkp.sql"')
